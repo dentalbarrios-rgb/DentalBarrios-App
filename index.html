@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DentalBarrios · Sonrisas que inspiran</title>
-<meta name="description" content="DentalBarrios - Clínica dental en Alborada 5ta etapa. Agenda tu cita. Tel: 0986262552">
+<meta name="description" content="DentalBarrios - Clinica dental en Alborada 5ta etapa. Agenda tu cita. Tel: 0986262552">
 <style>
-:root{--p:#1e3a5f;--s:#00a8e8;--a:#7cb342;--wa:#25d366}
+:root{--p:#1e3a5f;--s:#00a8e8;--a:#7cb342;--wa:#25d366;--promo:#e65100}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Segoe UI",system-ui,sans-serif;background:#f0f7fb;color:#1e293b;line-height:1.5}
 .hero{background:linear-gradient(135deg,#1e3a5f 0%,#0d47a1 50%,#00838f 100%);color:#fff;padding:28px 18px 40px;text-align:center}
@@ -17,6 +17,7 @@ body{font-family:"Segoe UI",system-ui,sans-serif;background:#f0f7fb;color:#1e293
 .btn-wa{background:var(--wa);color:#fff}
 .btn-p{background:#fff;color:var(--p)}
 .btn-o{background:transparent;border:2px solid #fff;color:#fff}
+.btn-promo{background:var(--promo);color:#fff}
 main{max-width:920px;margin:0 auto;padding:24px 16px 50px}
 .card{background:#fff;border-radius:14px;padding:20px;margin-bottom:16px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
 .card h2{color:var(--p);font-size:1.15rem;margin-bottom:10px}
@@ -29,6 +30,13 @@ input,select,textarea{width:100%;padding:10px 12px;border:1.5px solid #e2e8f0;bo
 .lead-ok{display:none;background:#e8f5e9;border:1px solid #a5d6a7;color:#2e7d32;padding:14px;border-radius:10px;margin-top:12px}
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
 .services div{background:linear-gradient(135deg,#e3f2fd,#e8f5e9);padding:14px;border-radius:10px;text-align:center;font-weight:600;font-size:.85rem;color:var(--p)}
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:8px}
+.promo-card{border:2px solid #ffe0b2;border-radius:12px;padding:16px;background:linear-gradient(180deg,#fff8e1,#fff)}
+.promo-card h3{color:var(--promo);font-size:1.05rem;margin-bottom:6px}
+.promo-card .precio{font-size:1.4rem;font-weight:800;color:var(--p);margin:8px 0}
+.promo-card .precio small{font-size:.75rem;font-weight:600;color:#64748b}
+.promo-card .desc{font-size:.88rem;color:#475569;margin-bottom:12px}
+.promo-card .vigencia{font-size:.75rem;color:#94a3b8;margin-bottom:10px}
 footer{text-align:center;padding:20px;font-size:.8rem;color:#64748b}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
 </style>
@@ -44,6 +52,44 @@ footer{text-align:center;padding:20px;font-size:.8rem;color:#64748b}
   <a class="btn btn-o" href="#contacto">Solicitar cita</a>
 </header>
 <main>
+
+  <!-- ========== PROMOCIONES DEL MES (cambia texto y precio aqui) ========== -->
+  <div class="card" id="promociones">
+    <h2>Promociones del mes</h2>
+    <p style="font-size:.9rem;color:#64748b;margin-bottom:8px">Ofertas vigentes. Agenda por WhatsApp o con el formulario de abajo.</p>
+    <div class="promos">
+
+      <!-- PROMO 1: cambia el titulo, descripcion, precio y vigencia -->
+      <div class="promo-card">
+        <h3>Limpieza dental + fluor</h3>
+        <div class="desc">Profilaxis profesional e aplicacion de fluor. Ideal para mantener tu sonrisa.</div>
+        <div class="precio">$35 <small>USD</small></div>
+        <div class="vigencia">Vigente hasta: 30 de septiembre 2026</div>
+        <a class="btn btn-promo" href="#contacto" style="font-size:.85rem;padding:8px 14px">Quiero esta promo</a>
+      </div>
+
+      <!-- PROMO 2 -->
+      <div class="promo-card">
+        <h3>Blanqueamiento dental</h3>
+        <div class="desc">Blanqueamiento en consultorio. Resultados visibles desde la primera sesion.</div>
+        <div class="precio">$120 <small>USD</small></div>
+        <div class="vigencia">Vigente hasta: 30 de septiembre 2026</div>
+        <a class="btn btn-promo" href="#contacto" style="font-size:.85rem;padding:8px 14px">Quiero esta promo</a>
+      </div>
+
+      <!-- PROMO 3 -->
+      <div class="promo-card">
+        <h3>Evaluacion + radiografia</h3>
+        <div class="desc">Consulta de evaluacion con radiografia periapical incluida.</div>
+        <div class="precio">$25 <small>USD</small></div>
+        <div class="vigencia">Vigente hasta: 30 de septiembre 2026</div>
+        <a class="btn btn-promo" href="#contacto" style="font-size:.85rem;padding:8px 14px">Quiero esta promo</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- ========== FIN PROMOCIONES ========== -->
+
   <div class="card">
     <h2>Nuestros servicios</h2>
     <div class="services">
@@ -51,38 +97,67 @@ footer{text-align:center;padding:20px;font-size:.8rem;color:#64748b}
       <div>Estetica dental</div><div>Protesis</div><div>Cirugia</div><div>Urgencias</div>
     </div>
   </div>
+
   <div class="card">
     <h2>Siguenos en redes</h2>
-    <p style="font-size:.9rem;color:#64748b;margin-bottom:10px">Reemplaza los enlaces por tus perfiles reales.</p>
+    <p style="font-size:.9rem;color:#64748b;margin-bottom:10px">
+      <!-- IMPORTANTE: cambia solo la parte del enlace entre comillas href="..." -->
+      Pon aqui los enlaces reales de tus perfiles.
+    </p>
     <div class="social">
+      <!-- WhatsApp del consultorio (ya esta con tu numero) -->
       <a href="https://wa.me/593986262552" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-      <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+
+      <!-- INSTAGRAM: cambia TU_USUARIO por tu usuario real, ejemplo: https://www.instagram.com/dentalbarrios -->
+      <a href="https://www.instagram.com/TU_USUARIO" target="_blank">Instagram</a>
+
+      <!-- FACEBOOK: pega el enlace completo de tu pagina de Facebook -->
+      <a href="https://www.facebook.com/TU_PAGINA" target="_blank">Facebook</a>
+
+      <!-- TIKTOK: cambia TU_USUARIO -->
+      <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank">TikTok</a>
+
+      <!-- YOUTUBE: pega el enlace de tu canal -->
+      <a href="https://www.youtube.com/@TU_CANAL" target="_blank">YouTube</a>
+
+      <!-- LINKEDIN (opcional) -->
+      <a href="https://www.linkedin.com/in/TU_PERFIL" target="_blank">LinkedIn</a>
     </div>
   </div>
+
   <div class="card" id="contacto">
     <h2>Agenda tu cita / Respuesta a anuncios</h2>
-    <p style="font-size:.9rem;color:#64748b;margin-bottom:12px">Si llegaste por un anuncio, completa el formulario. Te contactaremos por WhatsApp en unos minutos.</p>
+    <p style="font-size:.9rem;color:#64748b;margin-bottom:12px">Si llegaste por un anuncio o una promocion, completa el formulario. Te contactaremos por WhatsApp en unos minutos.</p>
     <div class="form-grid">
       <div><label>Nombre completo *</label><input id="leadNombre" placeholder="Tu nombre"></div>
       <div><label>WhatsApp *</label><input id="leadTel" placeholder="09xxxxxxxx"></div>
       <div><label>Como nos conociste?</label>
         <select id="leadOrigen">
-          <option>Anuncio Facebook</option><option>Anuncio Instagram</option><option>TikTok</option>
-          <option>YouTube</option><option>WhatsApp / conocido</option><option>Google / busqueda</option><option>Otro</option>
+          <option>Anuncio Facebook</option>
+          <option>Anuncio Instagram</option>
+          <option>TikTok</option>
+          <option>Estado de WhatsApp</option>
+          <option>YouTube</option>
+          <option>WhatsApp / conocido</option>
+          <option>Google / busqueda</option>
+          <option>Promocion del mes</option>
+          <option>Otro</option>
         </select>
       </div>
       <div><label>Motivo de consulta</label>
         <select id="leadMotivo">
-          <option>Evaluacion general</option><option>Dolor / urgencia</option><option>Limpieza</option>
-          <option>Ortodoncia</option><option>Estetica / blanqueamiento</option><option>Implantes / protesis</option>
-          <option>Continuar tratamiento</option><option>Otro</option>
+          <option>Evaluacion general</option>
+          <option>Dolor / urgencia</option>
+          <option>Limpieza</option>
+          <option>Ortodoncia</option>
+          <option>Estetica / blanqueamiento</option>
+          <option>Implantes / protesis</option>
+          <option>Continuar tratamiento</option>
+          <option>Consulta por promocion</option>
+          <option>Otro</option>
         </select>
       </div>
-      <div class="full"><label>Mensaje (opcional)</label><textarea id="leadMsg" rows="2" placeholder="Cuentanos que necesitas..."></textarea></div>
+      <div class="full"><label>Mensaje (opcional)</label><textarea id="leadMsg" rows="2" placeholder="Cuentanos que necesitas o que promocion te interesa..."></textarea></div>
     </div>
     <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px">
       <button class="btn btn-wa" onclick="enviarLead()">Enviar y abrir WhatsApp</button>
@@ -91,6 +166,7 @@ footer{text-align:center;padding:20px;font-size:.8rem;color:#64748b}
       Gracias! Se abrio WhatsApp con tu solicitud. En unos minutos te confirmamos la cita.
     </div>
   </div>
+
   <div class="card">
     <h2>Contacto del consultorio</h2>
     <p><strong>Tel:</strong> 0986262552<br>
